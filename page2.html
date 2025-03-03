@@ -83,26 +83,29 @@
 <body>
     <div class="container">
         <div class="form-container">
-            <form>
+            <form action="https://formspree.io/f/manqrajp" method="POST">
                 <label>Name *</label>
-                <input type="text" placeholder="Enter your name..">
-
+                <input type="text" name="name" placeholder="Enter your name.." required>
+            
                 <label>Email Address *</label>
-                <input type="email" placeholder="Enter your Email Address..">
-
+                <input type="email" name="email" placeholder="Enter your Email Address.." required>
+            
                 <label>Mobile Number *</label>
-                <input type="tel" placeholder="Enter your Mobile Number..">
-
+                <input type="tel" name="mobile" placeholder="Enter your Mobile Number.." required>
+            
                 <label>You are a..? *</label>
-                <select>
-                    <option>-Select-</option>
+                <select name="user_type" required>
+                    <option value="student">Student</option>
+                    <option value="professional">Professional</option>
+                    <option value="other">Other</option>
                 </select>
-
+            
                 <label>Comment *</label>
-                <textarea placeholder="Enter your Comment.."></textarea>
-
+                <textarea name="comment" placeholder="Enter your Comment.." required></textarea>
+            
                 <button type="submit">Submit</button>
             </form>
+            
             <img src="si.png" alt="Support Image" width="300">
         </div>
         
