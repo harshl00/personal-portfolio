@@ -1,0 +1,155 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li .active {
+    color: blue;
+}
+
+.download-btn {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: rgb(255, 220, 0);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 span {
+    color: blue;
+    font-size: 40px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.yellow-btn {
+    background-color: yellow;
+    color: black;
+}
+
+.dark-btn {
+    background-color: #444;
+    color: white;
+}
+
+.hero-image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* Adventure Section */
+.adventure {
+    display: flex;
+    align-items: center;
+    padding: 60px 50px;
+    background-color: #f9f9f9;
+}
+
+.adventure-text {
+    max-width: 50%;
+}
+
+.adventure-text h2 {
+    font-size: 28px;
+}
+
+.adventure-text span {
+    color: yellow;
+}
+
+.adventure-text p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.adventure-image img {
+    width: 350px;
+    max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero, .adventure {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .adventure-text {
+        max-width: 100%;
+    }
+    .hero-image, .adventure-image {
+        margin-top: 20px;
+    }
+    .nav-links {
+        display: none;
+    }
+    

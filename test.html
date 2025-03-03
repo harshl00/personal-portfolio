@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trek Reservation FAQs</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        /* Navigation Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Container */
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Accordion */
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: #555;
+            padding: 0 15px 15px;
+            display: none;
+            text-align: left;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Expand Icon */
+        .icon {
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Trek Reservation FAQs</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <a class="tab" href="#">Trek-Related</a>
+        <a class="tab" href="#">Bookings-Related</a>
+        <a class="tab" href="#">Cancellation & Refund</a>
+        <a class="tab" href="#">Payment-Related</a>
+        <a class="tab" href="#">Customer-Support</a>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Do I need prior trekking experience for this trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                Not necessarily! We list treks based on difficulty, and many treks are beginner-friendly. Check the trek details in our app before booking.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What should I pack for the trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                It depends on the trek, but essentials include good trekking shoes, a backpack, water, snacks, and weather-appropriate clothing. Detailed packing lists are provided in the trek description.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Are meals provided during the trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                Some trek packages include meals, while others don’t. Check the trek details in the app to know what’s included.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is the best season to go for this trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                It varies by location. The best season for each trek is mentioned in the trek details.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Is a guide provided for the trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                Yes, most treks have experienced guides. You’ll find guide details in the trek description.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Are there any age restrictions for the trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                Age restrictions vary per trek. Some treks allow kids above a certain age, while others are for adults only.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What safety measures are in place during the trek?</span>
+                <span class="icon">&#x25BE;</span>
+            </div>
+            <div class="faq-answer">
+                Trek organizers follow safety protocols, including emergency support, first-aid availability, and expert guides. Safety details are available in the trek description.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Accordion Functionality
+        document.querySelectorAll(".faq-question").forEach((question) => {
+            question.addEventListener("click", () => {
+                const faqItem = question.parentElement;
+
+                // Toggle the active class
+                faqItem.classList.toggle("active");
+
+                // Close other open items
+                document.querySelectorAll(".faq-item").forEach((item) => {
+                    if (item !== faqItem) {
+                        item.classList.remove("active");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
